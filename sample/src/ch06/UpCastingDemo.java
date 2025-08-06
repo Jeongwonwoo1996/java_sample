@@ -22,11 +22,7 @@ public class UpCastingDemo {
 		pArr[0] = new Student();
 		pArr[1] = new Employee();
 		pArr[2] = new SportsPlayer();
-		pArr[3] = new Enterainer();
-
-		for (Person person : pArr) {
-			person.whoAmI();
-		}
+		pArr[3] = new Entertainer();
 
 //		Student[] sArr = new Student[3];
 //		Employee[] eArr = new Employee[3];
