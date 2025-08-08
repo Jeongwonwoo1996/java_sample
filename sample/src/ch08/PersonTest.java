@@ -5,6 +5,7 @@ import java.util.Objects;
 public class PersonTest {
 
 	// 다형성, 제너릭, 람다식, 스트림 중요
+	// 강사님 EX_1_2 문제로 보강해야함
 
 	public static void main(String[] args) {
 		Person p1 = new Person("111111", "홍길동");
