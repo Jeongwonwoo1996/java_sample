@@ -15,7 +15,7 @@ public class BankApplication {
 //					비밀번호는 계좌번호, 이름, 기존 비밀번호가 일치하는 경우에만 변경할 수  있음. (Optional)
 
 	public static void main(String[] args) {
-//		Account[] accounts = new Account[100];
+		Scanner in = new Scanner(System.in);
 
 		ArrayList<Account> accountList = new ArrayList<>();
 
@@ -25,14 +25,9 @@ public class BankApplication {
 				---------------------------------------------------
 				선택>
 				""";
-		Scanner in = new Scanner(System.in);
 		String menu = "";
-		while (true) {
-//			String accountNo = "";
-//			String accountOwner = "";
-//			Long initBalance = 0L;
-//			String password = "";
 
+		while (true) {
 			System.out.print(msg);
 			menu = in.nextLine();
 			if (menu.equals("5")) {
@@ -60,7 +55,7 @@ public class BankApplication {
 		}
 	}
 
-	public static void accountCreate(ArrayList<Account> accountList, Scanner in) {
+	private static void accountCreate(ArrayList<Account> accountList, Scanner in) {
 		System.out.println("--------");
 		System.out.println("계좌생성");
 		System.out.println("--------");
@@ -68,7 +63,6 @@ public class BankApplication {
 		System.out.print("계좌번호: ");
 
 		boolean exist = false;
-		in = new Scanner(System.in);
 
 		String accountNo = in.nextLine();
 
@@ -101,7 +95,7 @@ public class BankApplication {
 		}
 	}
 
-	public static void accountList(ArrayList<Account> accountList, Scanner in) {
+	private static void accountList(ArrayList<Account> accountList, Scanner in) {
 		System.out.println("--------");
 		System.out.println("계좌목록");
 		System.out.println("--------");
@@ -110,13 +104,12 @@ public class BankApplication {
 		}
 	}
 
-	public static void accountDeposit(ArrayList<Account> accountList, Scanner in) {
+	private static void accountDeposit(ArrayList<Account> accountList, Scanner in) {
 		// 1. 유효성 검사 (계좌번호, 예금액 체크)
 		System.out.println("--------");
 		System.out.println("예금");
 		System.out.println("--------");
 
-		in = new Scanner(System.in);
 		System.out.print("계좌번호: ");
 		String accountNo = in.nextLine();
 
@@ -151,12 +144,11 @@ public class BankApplication {
 		}
 	}
 
-	public static void accountWithdraw(ArrayList<Account> accountList, Scanner in) {
+	private static void accountWithdraw(ArrayList<Account> accountList, Scanner in) {
 		// 1. 유효성 검사 (계좌번호, 출금액 체크)
 		System.out.println("--------");
 		System.out.println("출금");
 		System.out.println("--------");
-		in = new Scanner(System.in);
 
 		System.out.print("계좌번호: ");
 		String accountNo = in.nextLine();
