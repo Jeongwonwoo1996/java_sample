@@ -14,6 +14,7 @@ public class BankApplication {
 	// 4. 예금주의 이름이나 계좌번호는 계좌 생성 후 변걍할 수 없음.
 //					비밀번호는 계좌번호, 이름, 기존 비밀번호가 일치하는 경우에만 변경할 수  있음. (Optional)
 
+	// 배열 대신 데이터를 무한정 담을 수 있는 ArrayList을 이용하여 프로그램을 수정해보기
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
